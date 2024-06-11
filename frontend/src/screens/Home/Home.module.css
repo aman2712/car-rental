@@ -1,0 +1,172 @@
+.banner{
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+}
+
+.bannerContent{
+    flex: 0.5
+}
+
+.bannerTitle{
+    font-size: 70px;
+    font-weight: 700;
+}
+
+.bannerTitle > span{
+    color: var(--primary-yellow);
+}
+
+.bannerDesc{
+    margin-top: 20px;
+    color: gray;
+}
+
+.bannerImg{
+    flex: 0.45;
+}
+
+.bannerImg > img{
+    width: 100%;
+}
+
+.bannerContent > button{
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.section{
+    display: flex;
+    padding: 60px;
+}
+
+.section > img{
+    width: 650px;
+}
+
+.sectionContent{
+    max-width: 550px;
+}
+
+.sectionContent > button{
+    font-size: 16px;
+}
+
+.topTitle{
+    display: flex;
+    align-items: center;
+}
+
+.topTitle > p{
+    font-size: 17px;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    color: #c7c5c5;
+    font-weight: 600;
+}
+
+.topTitle > span{
+    width: 80px;
+    height: 2px;
+    background-color: var(--primary-yellow);
+    margin-left: 15px;
+}
+
+.sectionTitle{
+    font-size: 50px;
+    margin-top: 15px;
+}
+
+.sectionTitle > span{
+    color: var(--primary-yellow);
+}
+
+.sectionDesc{
+    color: gray;
+    margin: 30px 0;
+}
+
+.fleet{
+    padding: 60px;
+}
+
+.fleetCars{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.fleetCar{
+    margin-top: 50px;
+    cursor: pointer;
+    padding: 10px 0;
+    transition: 0.2s all linear;
+}
+
+.fleetCar > img{
+    filter: grayscale(1);
+    transition: 0.2s all linear;
+}
+
+.fleetCar > p{
+    font-size: 20px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.fleetCar:hover{
+    box-shadow: 0px 0px 100px 10px #252525a9;
+}
+
+.fleetCar:hover > img{
+    filter: grayscale(0);
+}
+
+.contact{
+    justify-content: space-between;
+}
+
+.contact > div{
+    max-width: max-content !important;
+}
+
+.contact > img{
+    width: 700px;
+    height: 550px;
+    object-fit: cover;
+    filter: grayscale(1);
+} 
+
+.inputGroup > p{
+    color: gray;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+.inputGroup > input{
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 0;
+    padding: 5px 10px;
+    font-size: 16px;
+    width: 60%;
+    font-family: 'Inter', sans-serif;
+    margin: 5px 0 20px 0;
+    border-bottom: 1px dashed gray;
+    outline: none;
+    color: #f1f1f1;
+    transition: 0.2s all linear;
+}
+
+.inputGroup > input::placeholder{
+    font-size: 14px;
+}
+
+.inputGroup > input:focus{
+    border-bottom: 1px dashed var(--primary-yellow);
+}
+
+.contactForm > button{
+    font-size: 16px;
+}

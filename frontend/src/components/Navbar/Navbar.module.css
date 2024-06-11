@@ -1,0 +1,42 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 60px;
+}
+
+.navbar > p{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.navLinks{
+    display: flex;
+    align-items: center;
+}
+
+.navLinks > p{
+    margin-right: 20px;
+    font-weight: 500;
+    color: rgb(116, 114, 114);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.navLinks > p > span{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-yellow);
+    transform: translateX(-150%);
+    transition: 0.3s all ease-in-out;
+}
+
+.navLinks > p:hover{
+    color: #f1f1f1;
+}
+
+.navLinks > p:hover > span{
+    transform: translateX(0);
+}

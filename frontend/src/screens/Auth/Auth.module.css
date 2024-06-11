@@ -1,0 +1,66 @@
+.auth{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+}
+
+.authbox{
+    padding: 20px;
+    box-shadow: 0px 0px 100px 30px #252525d5;
+    border-radius: 10px;
+    width: 350px;
+}
+
+.authTitle{
+    text-align: center;
+    font-size: 30px;
+    color: var(--primary-yellow);
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+
+.inputGroup > p{
+    color: gray;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+.inputGroup > input{
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 0;
+    padding: 5px 10px;
+    font-size: 16px;
+    width: 100%;
+    font-family: 'Inter', sans-serif;
+    margin: 5px 0 20px 0;
+    border-bottom: 1px dashed gray;
+    outline: none;
+    color: #f1f1f1;
+    transition: 0.2s all linear;
+}
+
+.inputGroup > input::placeholder{
+    font-size: 14px;
+}
+
+.inputGroup > input:focus{
+    border-bottom: 1px dashed var(--primary-yellow);
+}
+
+.authbox > button{
+    display: block;
+    margin-bottom: 20px !important;
+    margin: 0 auto;
+}
+
+.bottomText{
+    font-size: 14px;
+    text-align: center;
+}
+
+.bottomText > span{
+    color: var(--primary-yellow);
+    cursor: pointer;
+}
