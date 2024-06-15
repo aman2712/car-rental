@@ -16,11 +16,11 @@ export const registerUser = (req, res) => {
         if(error){
             return res.status(500).json({message: error.sqlMessage})
         }
-        const token = jwt.sign({name, email}, process.env.JWT_SECRET, {
+        const token = jwt.sign({id: results.insertId, name, email}, process.env.JWT_SECRET, {
             expiresIn: '30d'
         })
     
-        return res.status(200).json({name, email, token})
+        return res.status(200).json({id: results.insertId, name, email, token})
     })
 }
 
@@ -41,7 +41,7 @@ export const loginUser = (req, res) => {
         }
         const correctPassword = bcrypt.compareSync(password, results[0].password)
         if(correctPassword){
-            const token = jwt.sign({name: results[0].name, email}, process.env.JWT_SECRET, {
+            const token = jwt.sign({name: results[0].name, email, id: results[0].id}, process.env.JWT_SECRET, {
                 expiresIn: '30d'
             })
             return res.status(200).json({id: results[0].id, name: results[0].name, email, token})

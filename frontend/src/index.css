@@ -16,6 +16,7 @@ body{
   font-family: 'Inter', sans-serif;
   background-color: var(--primary-black);
   color: #f1f1f1;
+  scroll-behavior: smooth;
 }
 
 .primary-btn{
@@ -35,4 +36,9 @@ body{
 .primary-btn:hover{
   background-color: var(--primary-black);
   color: #f1f1f1;
+}
+
+.danger{
+  background-color: rgb(245, 47, 47);
+  border: 1px solid rgb(245, 47, 47);
 }

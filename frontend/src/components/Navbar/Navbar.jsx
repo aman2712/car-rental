@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import classes from './Navbar.module.css'
 
-export default function Navbar(){
+export default function Navbar({router}){
     const [loggedIn, setLoggedIn] = useState(false)
 
     const url = window.location.pathname.split('/').pop();
@@ -14,18 +14,18 @@ export default function Navbar(){
 
     return (
         <div className={classes.navbar}>
-            <p>rentals.</p>
+            <p onClick={() => router.navigate('/')}>rentals.</p>
             <div className={classes.navLinks}>
-                <p>Home <span></span></p>
-                <p>About <span></span></p>
-                <p>Fleet <span></span></p>
-                <p>Contact <span></span></p>
+                <p onClick={() => router.navigate('/')}>Home <span></span></p>
+                <p onClick={() => router.navigate('/#about')}>About <span></span></p>
+                <p onClick={() => router.navigate('/#fleet')}>Fleet <span></span></p>
+                <p onClick={() => router.navigate('/#contact')}>Contact <span></span></p>
                 <p>Services <span></span></p>
             </div>
             {loggedIn ? (
-                <button className='primary-btn'>Dashboard</button>
+                <button className='primary-btn' onClick={() => router.navigate('/dashboard')}>Dashboard</button>
             ) : (
-                <button className='primary-btn' onClick={() => window.location = '/auth'}>Sign Up</button>
+                <button className='primary-btn' onClick={() => router.navigate('/auth')}>Sign Up</button>
             )}
         </div>
     )

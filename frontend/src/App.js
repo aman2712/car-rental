@@ -4,6 +4,9 @@ import Auth from './screens/Auth/Auth';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import SingleCar from './screens/SingleCar/SingleCar';
+import Dashboard from './screens/Dashboard/Dashboard';
+import AdminDashboard from './screens/AdminDashboard/AdminDashboard';
+import NewListing from './screens/NewListing/NewListing';
 
 const router = createBrowserRouter([
   {
@@ -17,13 +20,25 @@ const router = createBrowserRouter([
   {
     path: '/fleet/:id',
     element: <SingleCar />
+  },
+  {
+    path: '/dashboard',
+    element: <Dashboard />
+  },
+  {
+    path: '/admin-dashboard',
+    element: <AdminDashboard />
+  },
+  {
+    path: '/new-listing',
+    element: <NewListing />
   }
 ])
 
 function App() {
   return (
     <main>
-      <Navbar />
+      <Navbar router={router} />
       <RouterProvider router={router} />
       <Footer />
     </main>

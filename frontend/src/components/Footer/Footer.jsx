@@ -14,7 +14,7 @@ export default function Footer(){
             </div>
         </div>
         <div className={classes.copyright}>
-            <p>&copy; 2024; Designed and Developed by Md Aman Khan</p>
+            <p>&copy; 2024 Designed and Developed by Md Aman Khan</p>
         </div>
         </>
     )

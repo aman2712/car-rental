@@ -8,6 +8,7 @@
 .navbar > p{
     font-size: 30px;
     font-weight: 700;
+    cursor: pointer;
 }
 
 .navLinks{
@@ -39,4 +40,13 @@
 
 .navLinks > p:hover > span{
     transform: translateX(0);
+}
+
+@media screen and (max-width: 468px) {
+    .navbar{
+        padding: 20px;
+    }
+    .navLinks{
+        display: none;
+    }
 }

@@ -29,13 +29,13 @@ export default function Auth(){
         
         try {
             if(register){
-                const resp = await apiCall('/register', 'POST', data, false)
+                const resp = await apiCall('/user/register', 'POST', data, false)
                 localStorage.setItem('user', JSON.stringify(resp))
             }else{
-                const resp = await apiCall('/login', 'POST', data, false)
+                const resp = await apiCall('/user/login', 'POST', data, false)
                 localStorage.setItem('user', JSON.stringify(resp))
             }
-            navigate('/')
+            navigate('/dashboard')
         } catch (error) {
             setMessage({success: false, text: error.message});
         }

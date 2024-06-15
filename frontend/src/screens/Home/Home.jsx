@@ -14,7 +14,7 @@ export default function Home(){
 
     async function getData(){
         try {
-            const resp = await apiCall('/get-cars', 'GET', null, false)
+            const resp = await apiCall('/car/get-cars', 'GET', null, false)
             setCars(resp)
         } catch (error) {
             console.log(error);
@@ -27,7 +27,7 @@ export default function Home(){
             <div className={classes.banner}>
                 <div className={classes.bannerContent}>
                     <p className={classes.bannerTitle}>The <span>finest</span> car rental in city</p>
-                    <p className={classes.bannerDesc}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto animi veniam vero atque alias magnam</p>
+                    <p className={classes.bannerDesc}>Lorem ipsum dolor sit amet adipisicing elit. Architecto animi veniam vero atque alias magnam</p>
                     <button className='primary-btn'>Explore Fleet</button>
                 </div>
                 <div className={classes.bannerImg}>
@@ -35,7 +35,7 @@ export default function Home(){
                 </div>
             </div>
             {/* about section */}
-            <div className={classes.section}>
+            <div className={classes.section} id='about'>
                 <img src='/images/about-bg.jpg' alt='About background' />
                 <div className={classes.sectionContent}>
                     <div className={classes.topTitle}>
@@ -48,7 +48,7 @@ export default function Home(){
                 </div>
             </div>
             {/* fleet */}
-            <div className={classes.fleet}>
+            <div className={classes.fleet} id='fleet'>
                 <div className={classes.topTitle}>
                     <p>Fleet</p>
                     <span></span>
@@ -64,7 +64,7 @@ export default function Home(){
                 </div>
             </div>
             {/* contact */}
-            <div className={`${classes.section} ${classes.contact}`}>
+            <div className={`${classes.section} ${classes.contact}`} id='contact'>
                 <div className={classes.sectionContent}>
                     <div className={classes.topTitle}>
                         <p>Contact Us</p>

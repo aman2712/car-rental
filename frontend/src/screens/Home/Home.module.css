@@ -170,3 +170,49 @@
 .contactForm > button{
     font-size: 16px;
 }
+
+@media screen and (max-width: 468px) {
+    .banner{
+        padding: 20px;
+        flex-direction: column;
+        text-align: center;
+    }
+    .bannerTitle{
+        font-size: 50px;
+    }
+    .bannerImg > img{
+        margin-top: 20px;
+        height: 400px;
+        object-fit: cover;
+    }
+    .section{
+        flex-direction: column;
+        padding: 20px;
+    }
+    .section > img{
+        width: 100%;
+    }
+    .topTitle > p{
+        font-size: 14px;
+    }
+    .sectionTitle{
+        font-size: 40px;
+    }
+    .fleet{
+        padding: 20px;
+    }
+    .fleetCars{
+        grid-template-columns: 1fr;
+        gap: 0px;
+    }
+    .contact{
+        margin: 50px 0;
+        padding: 30px;
+    }
+    .contact > img{
+        display: none;
+    }
+    .inputGroup > input{
+        width: 100%;
+    }
+}

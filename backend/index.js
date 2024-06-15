@@ -13,8 +13,8 @@ app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
-app.use('/api', carRoutes)
-app.use('/api', userRoutes)
+app.use('/api/car', carRoutes)
+app.use('/api/user', userRoutes)
 
 const port = process.env.PORT || 5000
 
