@@ -19,6 +19,7 @@ body{
   scroll-behavior: smooth;
 }
 
+/* few utility classes */
 .primary-btn{
   padding: 8px 20px;
   background-color: var(--primary-yellow);

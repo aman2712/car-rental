@@ -1,6 +1,7 @@
 import jwt from 'jsonwebtoken'
 import pool from '../utils/db.js'
 
+// verify the token to ensure user is logged in
 const checkToken = (req, res, next) => {
     let token = req.get('Authorization')
 
@@ -31,13 +32,14 @@ const checkToken = (req, res, next) => {
     }
 }
 
+// to make sure user is an admin
 export const admin = (req, res, next) => {
     if (req.user && req.user.admin === 1) {
       next()
     } else {
       res.status(401).json({message: 'Not authorized as admin'})
     }
-  }
+}
   
 
 export default checkToken
